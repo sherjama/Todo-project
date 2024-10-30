@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* boiler code  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: transparent;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    /* font-family: ""; */
+}
+
+/* for hide scrollbar  */
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* hide scrollbar in firefox */
+@layer utilities {
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    #hideScroll ::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    #hideScroll {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+}
+
+/* for firfox */
+#todoInput:focus {
+    outline: none;
+}
